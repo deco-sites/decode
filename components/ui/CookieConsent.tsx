@@ -36,8 +36,8 @@ function CookieConsent() {
       >
         <div class="container px-4 py-4 rounded border border-base-200 flex flex-col sm:flex-row gap-4 items-start sm:items-center shadow bg-base-100">
           <span class="flex-grow text-sm">
-            We utilize cookies on our site for security, performance and 
-            showing custom content and ads.
+            We utilize cookies on our site for security, performance and showing
+            custom content and ads.
           </span>
 
           <a href="https://www.deco.cx">
