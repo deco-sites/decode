@@ -346,6 +346,9 @@ function Section({
           __html: `:root {${variables}}`,
         }}
       />
+      <style dangerouslySetInnerHTML={{
+        __html: `html { scroll-behavior: smooth; }`
+      }}/>
     </Head>
   );
 }

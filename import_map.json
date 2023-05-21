@@ -1,7 +1,7 @@
 {
   "imports": {
     "deco-sites/decode/": "./",
-
+    "supabase": "https://esm.sh/@supabase/supabase-js@2.22.0",
     "deco-sites/fashion/": "./",
     "$store/": "./",
     "deco-sites/std/": "https://denopkg.com/deco-sites/std@f018c671/",

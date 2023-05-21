@@ -6,7 +6,7 @@
     "editor.defaultFormatter": "denoland.vscode-deno"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
+    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
   },
   "editor.suggest.showStatusBar": true,
   "editor.quickSuggestions": {

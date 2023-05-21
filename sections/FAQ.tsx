@@ -18,7 +18,7 @@ export default function FAQ({
   callToActionDescribe,
 }: Props) {
   return (
-    <div className="mb-16 w-full flex flex-col m-auto">
+    <div className="mb-16 w-full flex flex-col m-auto lg:w-2/3">
       <h2 className="text-5xl mt-16 mx-4 text-center mb-4">
         {title ?? "FAQs"}
       </h2>
