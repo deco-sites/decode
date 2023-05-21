@@ -4,7 +4,7 @@ export interface Props {
   expectedOutput: string;
   linesOfCode: string[];
 }
-4
+4;
 export default function CodeSection({ expectedOutput, linesOfCode }: Props) {
   const { input, isCorrect, output, run, setInput } = useJs({ expectedOutput });
 
@@ -26,13 +26,14 @@ export default function CodeSection({ expectedOutput, linesOfCode }: Props) {
           class="textarea textarea-bordered resize-none"
           cols={30}
           rows={3}
-        ></textarea>
+        >
+        </textarea>
         <button class="btn" onClick={run}>
           Run
         </button>
-        {output.length ? (
-          <p>{isCorrect ? "Nice!" : "Oops, try again!"}</p>
-        ) : null}
+        {output.length
+          ? <p>{isCorrect ? "Nice!" : "Oops, try again!"}</p>
+          : null}
         <div
           class={`mockup-code bg-primary ${
             output.length && isCorrect ? "" : ""
