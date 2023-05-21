@@ -28,11 +28,10 @@ function Newsletter() {
     <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-20">
       <div class="flex flex-col gap-2 max-w-[400px]">
         <span class="font-medium text-2xl text-primary-content">
-          Cadastre-se
+          Register yourself
         </span>
         <span class="text-sm text-primary-content">
-          Fique por dentro das novidades e ganhe 15% de desconto na primeira
-          compra. Para mais informações clique aqui.
+          Be the first one to know when we drop something new, and get <span class="text-orange-500 font-semibold">15% discount</span> on all courses.
         </span>
       </div>
       <form
@@ -42,11 +41,11 @@ function Newsletter() {
         <div class="input-group">
           <input
             name="email"
-            class="flex-grow input input-primary"
-            placeholder="Seu e-mail"
+            class="flex-grow input input-bordered"
+            placeholder="Your email"
           />
           <button class="btn disabled:loading" disabled={loading}>
-            Cadastrar
+            Register
           </button>
         </div>
       </form>

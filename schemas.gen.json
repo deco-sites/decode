@@ -68,6 +68,7 @@
               "./islands/SearchControls.tsx",
               "./islands/ShippingSimulation.tsx",
               "./islands/SliderJS.tsx",
+              "./islands/TerminalHero.tsx",
               "./islands/WishlistButton.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
@@ -85,14 +86,17 @@
               "deco-sites/decode/sections/Carousel.tsx",
               "deco-sites/decode/sections/CookieConsent.tsx",
               "deco-sites/decode/sections/DesignSystem.tsx",
+              "deco-sites/decode/sections/FAQ.tsx",
               "deco-sites/decode/sections/Features.tsx",
               "deco-sites/decode/sections/Footer.tsx",
               "deco-sites/decode/sections/Header.tsx",
+              "deco-sites/decode/sections/Hero.tsx",
               "deco-sites/decode/sections/Highlights.tsx",
               "deco-sites/decode/sections/LinkTree.tsx",
               "deco-sites/decode/sections/ProductDetails.tsx",
               "deco-sites/decode/sections/ProductShelf.tsx",
               "deco-sites/decode/sections/SearchResult.tsx",
+              "deco-sites/decode/sections/Terminal.tsx",
               "deco-sites/decode/sections/WhatsApp.tsx",
               "deco-sites/decode/sections/WishlistGallery.tsx",
               "deco-sites/std/sections/Analytics.tsx",
@@ -7502,7 +7506,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors&b966eeb0bbdb3699ee11b12ce6a39cc4": {
+    "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors&c72a79f549e51ceeea90e5091fac4a08": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors"
@@ -7518,7 +7522,7 @@
           "required": []
         }
       ],
-      "title": "Colors&b966eeb0bbdb3699ee11b12ce6a39cc4"
+      "title": "Colors&c72a79f549e51ceeea90e5091fac4a08"
     },
     "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Miscellaneous": {
       "type": "object",
@@ -7621,7 +7625,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors&b966eeb0bbdb3699ee11b12ce6a39cc4",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors&c72a79f549e51ceeea90e5091fac4a08",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -7635,6 +7639,56 @@
       },
       "required": [],
       "title": "deco-sites/decode/sections/DesignSystem.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvRkFRLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title"
+        },
+        "describe": {
+          "type": "string",
+          "title": "Describe"
+        },
+        "callToActionTitle": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Call To Action Title"
+        },
+        "callToActionDescribe": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Call To Action Describe"
+        },
+        "question": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Question"
+        },
+        "answer": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Answer"
+        }
+      },
+      "required": [
+        "describe",
+        "question",
+        "answer"
+      ],
+      "title": "deco-sites/decode/sections/FAQ.tsx@Props"
     },
     "ZGVjby1zaXRlcy9kZWNvZGUvY29tcG9uZW50cy91aS9GZWF0dXJlcy50c3g=@Feature": {
       "type": "object",
@@ -8164,13 +8218,6 @@
     "ZGVjby1zaXRlcy9kZWNvZGUvY29tcG9uZW50cy9oZWFkZXIvSGVhZGVyLnRzeA==@Props": {
       "type": "object",
       "properties": {
-        "alerts": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "title": "Alerts"
-        },
         "searchbar": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvY29tcG9uZW50cy9zZWFyY2gvU2VhcmNoYmFyLnRzeA==@EditableProps",
           "title": "Search Bar"
@@ -8190,9 +8237,7 @@
           "title": "Enable Top Search terms"
         }
       },
-      "required": [
-        "alerts"
-      ],
+      "required": [],
       "title": "deco-sites/decode/components/header/Header.tsx@Props"
     },
     "ZGVjby1zaXRlcy9kZWNvZGUvY29tcG9uZW50cy91aS9IaWdobGlnaHRzLnRzeA==@Highlight": {
@@ -8857,7 +8902,11 @@
         },
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "The audience name (will be used on cookies).",
+          "description": "Add a meaningful short word for the audience name.",
+          "maxLength": 22,
+          "minLength": 3,
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
@@ -8973,7 +9022,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -8991,13 +9040,13 @@
           ]
         }
       ],
-      "title": "95abd76f92dd138f258080286726977e|WorkflowRef"
+      "title": "6fafe0f553db3c0685828404a37be338|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -10553,6 +10602,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL1Rlcm1pbmFsSGVyby50c3g=": {
+      "title": "./islands/TerminalHero.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/TerminalHero.tsx"
+          ],
+          "default": "./islands/TerminalHero.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL1dpc2hsaXN0QnV0dG9uLnRzeA==": {
       "title": "./islands/WishlistButton.tsx",
       "type": "object",
@@ -10904,6 +10969,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvRkFRLnRzeA==": {
+      "title": "deco-sites/decode/sections/FAQ.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvRkFRLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/decode/sections/FAQ.tsx"
+          ],
+          "default": "deco-sites/decode/sections/FAQ.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvRmVhdHVyZXMudHN4": {
       "title": "deco-sites/decode/sections/Features.tsx",
       "type": "object",
@@ -10964,6 +11050,22 @@
             "deco-sites/decode/sections/Header.tsx"
           ],
           "default": "deco-sites/decode/sections/Header.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvSGVyby50c3g=": {
+      "title": "deco-sites/decode/sections/Hero.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/decode/sections/Hero.tsx"
+          ],
+          "default": "deco-sites/decode/sections/Hero.tsx"
         }
       }
     },
@@ -11069,6 +11171,22 @@
             "deco-sites/decode/sections/SearchResult.tsx"
           ],
           "default": "deco-sites/decode/sections/SearchResult.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvVGVybWluYWwudHN4": {
+      "title": "deco-sites/decode/sections/Terminal.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/decode/sections/Terminal.tsx"
+          ],
+          "default": "deco-sites/decode/sections/Terminal.tsx"
         }
       }
     },
@@ -12179,6 +12297,9 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL1NsaWRlckpTLnRzeA=="
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL1Rlcm1pbmFsSGVyby50c3g="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL1dpc2hsaXN0QnV0dG9uLnRzeA=="
         }
       ]
@@ -12254,6 +12375,9 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA=="
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvRkFRLnRzeA=="
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvRmVhdHVyZXMudHN4"
         },
         {
@@ -12261,6 +12385,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvSGVhZGVyLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvSGVyby50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvSGlnaGxpZ2h0cy50c3g="
@@ -12276,6 +12403,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvU2VhcmNoUmVzdWx0LnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvVGVybWluYWwudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvV2hhdHNBcHAudHN4"
