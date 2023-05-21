@@ -1,1 +1,1 @@
-export { default } from '$store/islands/TerminalHero.tsx';
+export { default } from "$store/islands/TerminalHero.tsx";

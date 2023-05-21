@@ -31,7 +31,9 @@ function Newsletter() {
           Register yourself
         </span>
         <span class="text-sm text-primary-content">
-          Be the first one to know when we drop something new, and get <span class="text-orange-500 font-semibold">15% discount</span> on all courses.
+          Be the first one to know when we drop something new, and get{" "}
+          <span class="text-orange-500 font-semibold">15% discount</span>{" "}
+          on all courses.
         </span>
       </div>
       <form

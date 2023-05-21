@@ -1,23 +1,23 @@
-import { useState, useCallback } from 'preact/hooks';
+import { useCallback, useState } from "preact/hooks";
 
 const log = console.log;
-console.log = (...value: any) => {
-    log.apply(console, value);
-    return value;
+console.log = (...value: unknown[]) => {
+  log.apply(console, value);
+  return value;
 };
 
 export function useJs({ expectedOutput }: { expectedOutput?: string }) {
-    const [input, setInput] = useState('');
-    const [output, setOutput] = useState('');
-    const [isCorrect, setIsCorrect] = useState(false);
+  const [input, setInput] = useState("");
+  const [output, setOutput] = useState("");
+  const [isCorrect, setIsCorrect] = useState(false);
 
-    const run = useCallback(() => {
-        const [result]: string = eval(input);
-        setOutput(result);
-        if (expectedOutput) {
-            setIsCorrect(result.trim() === expectedOutput.trim());
-        }
-    }, [input]);
+  const run = useCallback(() => {
+    const [result]: string = eval(input);
+    setOutput(result);
+    if (expectedOutput) {
+      setIsCorrect(result.trim() === expectedOutput.trim());
+    }
+  }, [input]);
 
-    return { input, setInput, output, run, isCorrect };
+  return { input, setInput, output, run, isCorrect };
 }
