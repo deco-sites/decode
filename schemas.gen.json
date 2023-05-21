@@ -6625,6 +6625,70 @@
       ],
       "title": "deco-sites/decode/components/ui/ShippingSimulation.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9kZWNvZGUvaXNsYW5kcy9UZXJtaW5hbEhlcm8udHN4@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "code": {
+          "type": "object",
+          "properties": {
+            "expectedOutput": {
+              "type": "string",
+              "title": "Expected Output"
+            },
+            "lines": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "title": "Lines"
+            }
+          },
+          "required": [
+            "expectedOutput",
+            "lines"
+          ],
+          "title": "Code"
+        },
+        "lesson": {
+          "type": "object",
+          "properties": {
+            "lessonTitle": {
+              "type": "string",
+              "title": "Lesson Title"
+            },
+            "lessonSections": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string",
+                    "title": "Text"
+                  }
+                },
+                "required": [
+                  "text"
+                ]
+              },
+              "title": "Lesson Sections"
+            }
+          },
+          "required": [
+            "lessonTitle",
+            "lessonSections"
+          ],
+          "title": "Lesson"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "title": "deco-sites/decode/islands/TerminalHero.tsx@Props"
+    },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
       "$ref": "#/root/pages",
       "title": "Page"
@@ -10605,6 +10669,11 @@
     "Li9pc2xhbmRzL1Rlcm1pbmFsSGVyby50c3g=": {
       "title": "./islands/TerminalHero.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvaXNsYW5kcy9UZXJtaW5hbEhlcm8udHN4@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
@@ -11177,6 +11246,11 @@
     "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvVGVybWluYWwudHN4": {
       "title": "deco-sites/decode/sections/Terminal.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvaXNsYW5kcy9UZXJtaW5hbEhlcm8udHN4@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
