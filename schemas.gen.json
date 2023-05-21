@@ -96,6 +96,8 @@
               "deco-sites/decode/sections/Header.tsx",
               "deco-sites/decode/sections/Hero.tsx",
               "deco-sites/decode/sections/Highlights.tsx",
+              "deco-sites/decode/sections/ImageSection.tsx",
+              "deco-sites/decode/sections/LessonNavbar.tsx",
               "deco-sites/decode/sections/LessonTitle.tsx",
               "deco-sites/decode/sections/LinkTree.tsx",
               "deco-sites/decode/sections/ProductDetails.tsx",
@@ -8401,6 +8403,37 @@
       ],
       "title": "deco-sites/decode/components/ui/Highlights.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvSW1hZ2VTZWN0aW9uLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "title": "Url"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        }
+      },
+      "required": [
+        "url",
+        "alt"
+      ],
+      "title": "deco-sites/decode/sections/ImageSection.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvTGVzc29uTmF2YmFyLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "author": {
+          "type": "string",
+          "title": "Author"
+        }
+      },
+      "required": [
+        "author"
+      ],
+      "title": "deco-sites/decode/sections/LessonNavbar.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvTGVzc29uVGl0bGUudHN4@Props": {
       "type": "object",
       "properties": {
@@ -11314,6 +11347,48 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvSW1hZ2VTZWN0aW9uLnRzeA==": {
+      "title": "deco-sites/decode/sections/ImageSection.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvSW1hZ2VTZWN0aW9uLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/decode/sections/ImageSection.tsx"
+          ],
+          "default": "deco-sites/decode/sections/ImageSection.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvTGVzc29uTmF2YmFyLnRzeA==": {
+      "title": "deco-sites/decode/sections/LessonNavbar.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvTGVzc29uTmF2YmFyLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/decode/sections/LessonNavbar.tsx"
+          ],
+          "default": "deco-sites/decode/sections/LessonNavbar.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvTGVzc29uVGl0bGUudHN4": {
       "title": "deco-sites/decode/sections/LessonTitle.tsx",
       "type": "object",
@@ -12674,6 +12749,12 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvSGlnaGxpZ2h0cy50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvSW1hZ2VTZWN0aW9uLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvTGVzc29uTmF2YmFyLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9kZWNvZGUvc2VjdGlvbnMvTGVzc29uVGl0bGUudHN4"

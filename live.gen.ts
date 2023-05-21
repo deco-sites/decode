@@ -28,20 +28,22 @@ import * as $$$$$$$$4 from "./sections/SearchResult.tsx";
 import * as $$$$$$$$5 from "./sections/WishlistGallery.tsx";
 import * as $$$$$$$$6 from "./sections/FAQ.tsx";
 import * as $$$$$$$$7 from "./sections/LessonTitle.tsx";
-import * as $$$$$$$$8 from "./sections/DesignSystem.tsx";
-import * as $$$$$$$$9 from "./sections/Carousel.tsx";
-import * as $$$$$$$$10 from "./sections/ProductDetails.tsx";
-import * as $$$$$$$$11 from "./sections/ProductShelf.tsx";
-import * as $$$$$$$$12 from "./sections/Hero.tsx";
-import * as $$$$$$$$13 from "./sections/CookieConsent.tsx";
-import * as $$$$$$$$14 from "./sections/TextSection.tsx";
-import * as $$$$$$$$15 from "./sections/Footer.tsx";
-import * as $$$$$$$$16 from "./sections/Header.tsx";
-import * as $$$$$$$$17 from "./sections/Highlights.tsx";
-import * as $$$$$$$$18 from "./sections/WhatsApp.tsx";
-import * as $$$$$$$$19 from "./sections/Terminal.tsx";
-import * as $$$$$$$$20 from "./sections/LinkTree.tsx";
-import * as $$$$$$$$21 from "./sections/DecoHero.tsx";
+import * as $$$$$$$$8 from "./sections/LessonNavbar.tsx";
+import * as $$$$$$$$9 from "./sections/DesignSystem.tsx";
+import * as $$$$$$$$10 from "./sections/Carousel.tsx";
+import * as $$$$$$$$11 from "./sections/ProductDetails.tsx";
+import * as $$$$$$$$12 from "./sections/ProductShelf.tsx";
+import * as $$$$$$$$13 from "./sections/Hero.tsx";
+import * as $$$$$$$$14 from "./sections/CookieConsent.tsx";
+import * as $$$$$$$$15 from "./sections/TextSection.tsx";
+import * as $$$$$$$$16 from "./sections/Footer.tsx";
+import * as $$$$$$$$17 from "./sections/Header.tsx";
+import * as $$$$$$$$18 from "./sections/Highlights.tsx";
+import * as $$$$$$$$19 from "./sections/WhatsApp.tsx";
+import * as $$$$$$$$20 from "./sections/ImageSection.tsx";
+import * as $$$$$$$$21 from "./sections/Terminal.tsx";
+import * as $$$$$$$$22 from "./sections/LinkTree.tsx";
+import * as $$$$$$$$23 from "./sections/DecoHero.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -186,25 +188,27 @@ const manifest = {
     "$live/sections/UseSlot.tsx": i2$$$$2,
     "deco-sites/decode/sections/BannerGrid.tsx": $$$$$$$$2,
     "deco-sites/decode/sections/BannerPLP.tsx": $$$$$$$$3,
-    "deco-sites/decode/sections/Carousel.tsx": $$$$$$$$9,
+    "deco-sites/decode/sections/Carousel.tsx": $$$$$$$$10,
     "deco-sites/decode/sections/CodeSection.tsx": $$$$$$$$0,
-    "deco-sites/decode/sections/CookieConsent.tsx": $$$$$$$$13,
-    "deco-sites/decode/sections/DecoHero.tsx": $$$$$$$$21,
-    "deco-sites/decode/sections/DesignSystem.tsx": $$$$$$$$8,
+    "deco-sites/decode/sections/CookieConsent.tsx": $$$$$$$$14,
+    "deco-sites/decode/sections/DecoHero.tsx": $$$$$$$$23,
+    "deco-sites/decode/sections/DesignSystem.tsx": $$$$$$$$9,
     "deco-sites/decode/sections/FAQ.tsx": $$$$$$$$6,
     "deco-sites/decode/sections/Features.tsx": $$$$$$$$1,
-    "deco-sites/decode/sections/Footer.tsx": $$$$$$$$15,
-    "deco-sites/decode/sections/Header.tsx": $$$$$$$$16,
-    "deco-sites/decode/sections/Hero.tsx": $$$$$$$$12,
-    "deco-sites/decode/sections/Highlights.tsx": $$$$$$$$17,
+    "deco-sites/decode/sections/Footer.tsx": $$$$$$$$16,
+    "deco-sites/decode/sections/Header.tsx": $$$$$$$$17,
+    "deco-sites/decode/sections/Hero.tsx": $$$$$$$$13,
+    "deco-sites/decode/sections/Highlights.tsx": $$$$$$$$18,
+    "deco-sites/decode/sections/ImageSection.tsx": $$$$$$$$20,
+    "deco-sites/decode/sections/LessonNavbar.tsx": $$$$$$$$8,
     "deco-sites/decode/sections/LessonTitle.tsx": $$$$$$$$7,
-    "deco-sites/decode/sections/LinkTree.tsx": $$$$$$$$20,
-    "deco-sites/decode/sections/ProductDetails.tsx": $$$$$$$$10,
-    "deco-sites/decode/sections/ProductShelf.tsx": $$$$$$$$11,
+    "deco-sites/decode/sections/LinkTree.tsx": $$$$$$$$22,
+    "deco-sites/decode/sections/ProductDetails.tsx": $$$$$$$$11,
+    "deco-sites/decode/sections/ProductShelf.tsx": $$$$$$$$12,
     "deco-sites/decode/sections/SearchResult.tsx": $$$$$$$$4,
-    "deco-sites/decode/sections/Terminal.tsx": $$$$$$$$19,
-    "deco-sites/decode/sections/TextSection.tsx": $$$$$$$$14,
-    "deco-sites/decode/sections/WhatsApp.tsx": $$$$$$$$18,
+    "deco-sites/decode/sections/Terminal.tsx": $$$$$$$$21,
+    "deco-sites/decode/sections/TextSection.tsx": $$$$$$$$15,
+    "deco-sites/decode/sections/WhatsApp.tsx": $$$$$$$$19,
     "deco-sites/decode/sections/WishlistGallery.tsx": $$$$$$$$5,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
