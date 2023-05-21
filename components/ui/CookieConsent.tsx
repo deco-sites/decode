@@ -36,19 +36,19 @@ function CookieConsent() {
       >
         <div class="container px-4 py-4 rounded border border-base-200 flex flex-col sm:flex-row gap-4 items-start sm:items-center shadow bg-base-100">
           <span class="flex-grow text-sm">
-            Utilizamos cookies em nosso site para melhorar seu desempenho,
-            segurança e personalizar conteúdo e anúncios.
+            We utilize cookies on our site for security, performance and 
+            showing custom content and ads.
           </span>
 
           <a href="https://www.deco.cx">
             <span class="underline text-sm">
-              Nossa política de privacidade
+              Our privacy policy
             </span>
           </a>
 
           <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-            <Button data-button-cc-accept>Aceitar</Button>
-            <Button data-button-cc-close class="btn-outline">Fechar</Button>
+            <Button data-button-cc-accept>Accept</Button>
+            <Button data-button-cc-close class="btn-outline">Close</Button>
           </div>
         </div>
       </div>
